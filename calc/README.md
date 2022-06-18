@@ -1,5 +1,10 @@
 # ZKP Calculator
 
+## Versions
+- python 3.10.2
+- zokrates 0.7.13
+- web3.py 5.29.2
+
 ## Resources
 - zokrate docs
 
