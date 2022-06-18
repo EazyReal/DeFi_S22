@@ -1,0 +1,14 @@
+{
+  "inputs": [
+    {
+      "name": "address",
+      "public": true,
+      "type": "field"
+    }
+  ],
+  "outputs": [
+    {
+      "type": "field"
+    }
+  ]
+}
