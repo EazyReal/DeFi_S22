@@ -1,5 +1,7 @@
 # ZKP Calculator
 
+## Resources
+- zokrate docs
 
 ## Processure
 - the code basically is a stack calculator
@@ -8,6 +10,7 @@
 
 ## Problems
 - use `web.py` to send transactions to ropsten with infura
+  - this is the first time I send a tx on chain via web3.py, the experience is terrible and took me 2 hours (for uploading tx and trying to figure out the logics from the poor written docs)
   - https://web3py.readthedocs.io/en/stable/examples.html#using-infura-rinkeby-node
   - https://web3py.readthedocs.io/en/stable/web3.eth.account.html?highlight=transaction#sign-a-contract-transaction
 

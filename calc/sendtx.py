@@ -2,6 +2,10 @@ import web3
 import os
 import json
 
+# prelimenary:
+# the zok cli steps
+# replace the proving and verification key
+
 executable = "./../zokrates-0.7.13-aarch64-apple-darwin/zokrates"
 
 def toStruct(proof):
