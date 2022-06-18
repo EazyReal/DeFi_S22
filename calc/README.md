@@ -8,10 +8,17 @@
 ## Resources
 - zokrate docs
 
-## Processure
+## Solving Processure
 - the code basically is a stack calculator
 - a `OP_CALC` will update top-1 with OP and top
 - a `OP_PUSH` will invoke a read of data and push the next OP into the stack
+
+## Usage 
+- get proof and upload to chain 
+  - `python sendtx.py`
+- get confirmation of `isDone`
+  - `python check_done.py`
+  - `ts-node check_done.ts`
 
 ## Problems
 - use `web.py` to send transactions to ropsten with infura
