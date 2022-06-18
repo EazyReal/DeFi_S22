@@ -44,6 +44,16 @@ with open('proof.json', 'r') as f:
 # sending transactions
 print("sending transactions...")
 
-tx_hash = verifier.functions.verifyTx(proof, inp).transact()
+# https://web3py.readthedocs.io/en/stable/examples.html#using-infura-rinkeby-node
+# https://web3py.readthedocs.io/en/stable/web3.eth.account.html?highlight=transaction#sign-a-contract-transaction
 
-print(tx_hash)
+tx = verifier.functions.verifyTx(proof, inp).buildTransaction({
+    "chainId": 3,
+    "gas": 500000, # need enough gas
+    'nonce' : w3.eth.get_transaction_count(account.address)
+    })
+signed_tx = w3.eth.account.sign_transaction(tx, account.privateKey)
+tx_hash = w3.eth.send_raw_transaction(signed_tx.rawTransaction)
+tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
+
+print(tx_hash, tx_receipt)
